@@ -1,0 +1,89 @@
+@import './fonts.scss';
+@import './lds-ring.scss';
+
+html,
+body {
+  font-family: 'Calibri';
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+canvas {
+  outline: none;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+a {
+  all: unset;
+}
+
+.link {
+  color: #0099ff;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.anim-pulse {
+  animation: pulse 0.3s linear;
+}
+
+.anim-pulse-on-hover {
+  &:hover {
+    animation: pulse 0.3s linear;
+  }
+}
+
+.anim-fade {
+  &-in {
+    animation: fade-in 0.3s linear;
+  }
+
+  &-out {
+    animation: fade-out 0.3s linear;
+  }
+}
+
+.clickable:hover {
+  cursor: pointer;
+}
